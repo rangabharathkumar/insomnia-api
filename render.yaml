@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: obesity-api
+    name: insomnia-api
     env: python
+    plan: starter
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 80"
-    envVars:
-      - key: DATABASE_URL
-        fromDatabase: your-database
-    plan: free
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port 10003"
+    routes:
+      - path: /
