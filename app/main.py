@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from app.model_utils import predict
+from app.model_utils import predict  # Ensure this path is correct
 
-app = FastAPI(title="🛌 Insomnia Prediction API")
+app = FastAPI(title="Insomnia Prediction API")
 
 class InputData(BaseModel):
     Gender: str
